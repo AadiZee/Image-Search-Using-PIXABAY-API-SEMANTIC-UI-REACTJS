@@ -8,7 +8,7 @@ class App extends React.Component {
 
   onSearchSubmit = async (entry) => {
     const response = await axios.get(
-      `https://pixabay.com/api/?key=23505619-f6572b2d7822d8114c6b4ac0b&q=${entry}&image_type=photo&pretty=true`
+      `https://pixabay.com/api/?key={YOUR API KEY}&q=${entry}&image_type=photo&pretty=true`
     );
     this.setState({ images: response.data.hits });
   };
